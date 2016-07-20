@@ -1,0 +1,14 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+</head>
+<body>
+    <h2>Are you sure you want to delete the following course?</h2>
+    {% for course in courses %}
+        <p>name: {{course.title'}}</p>
+        <p>description: {{course.description}}</p>
+        <a href="/"><button>No</button></a>
+        <a href="/remove"><button>Yes! I want to delete this</button></a>
+    {% endfor %}
+</body>
+</html>
