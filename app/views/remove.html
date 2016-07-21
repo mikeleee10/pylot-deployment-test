@@ -4,11 +4,9 @@
 </head>
 <body>
     <h2>Are you sure you want to delete the following course?</h2>
-    {% for course in courses %}
-        <p>name: {{course.title'}}</p>
+        <p>name: {{course.title}}</p>
         <p>description: {{course.description}}</p>
         <a href="/"><button>No</button></a>
-        <a href="/remove"><button>Yes! I want to delete this</button></a>
-    {% endfor %}
+        <a href="/remove/{{course.id}}"><button>Yes! I want to delete this</button></a>
 </body>
 </html>

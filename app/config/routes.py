@@ -18,6 +18,8 @@ from system.core.router import routes
 """
 routes['default_controller'] = 'Courses'
 routes['POST']['/courses/add'] = 'Courses#add'
+routes['GET']['/courses/remove/<int:id>'] = 'Courses#remove'
+routes['GET']['/remove/<int:id>'] = 'Courses#remove_course'
 
 """
     You can add routes and specify their handlers as follows:

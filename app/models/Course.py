@@ -18,22 +18,20 @@ class Course(Model):
         self.db.query_db(query, data)
         return True
 
-    def get_course(self):
+    def get_courses(self):
         query = "SELECT * FROM courses ORDER by id DESC"
         return self.db.query_db(query)
-        return True
 
-    def remove(self, id):
+    def show_course(self, id):
         query = "SELECT * FROM courses WHERE id = :id"
         data = {'id': id}
-        self.db.query_db(query,data)
-        return True
+        return self.db.query_db(query,data)
+
 
     def remove_course(self,id):
         query = "DELETE FROM courses WHERE id = :id"
         data = {'id': id}
-        self.db.query_db(query, data)
-        return True
+        return self.db.query_db(query, data)
 
 
     """
